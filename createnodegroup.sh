@@ -1,0 +1,14 @@
+eksctl create nodegroup --cluster=kastro-eks \
+                        --region=eu-north-1 \
+                        --name=node2 \
+                        --node-type=t3.medium \
+                        --nodes=3 \
+                        --nodes-min=2 \
+                        --nodes-max=4 \
+                        --node-volume-size=20 \
+                        --managed \
+                        --asg-access \
+                        --external-dns-access \
+                        --full-ecr-access \
+                        --appmesh-access \
+                        --alb-ingress-access
